@@ -314,7 +314,7 @@ export class EntryCSLAdapter extends Entry {
   }
 
   get titleShort() {
-    return this.data['title-short'];
+    return this.data['title-short'] || this.data.title?.substring(0, this.data.title.indexOf(':')) || this.data.title;
   }
 
   get URL() {
